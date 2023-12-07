@@ -11,8 +11,12 @@ header {
     padding: 20px;
 }
 
-h1, h2 {
+h1 {
     color: #fff; /* Warna teks putih */
+}
+
+h2 {
+    color: #030202;
 }
 
 p {
