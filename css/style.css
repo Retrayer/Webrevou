@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    background-color: #35424a; /* Warna biru tua */
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #fff; /* Warna teks putih */
+}
+
+p {
+    color: #ccc; /* Warna teks abu-abu muda */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9; /* Set background color for the main container */
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1; /* Equal width for both sections */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+label {
+    flex: 0 0 auto;
+    width: 50px;
+    margin-right: 40px;
+}
+
+input {
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    flex: 1;
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8948; /* Change the color to your desired pressed color */
+}
