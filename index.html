@@ -3,60 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Perhitungan Luas dan Keliling Segitiga</title>
+    <title>Kalkulator Matematik Segitiga</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
 <body>
-     <header>
-         <h1>Perhitungan Luas dan Keliling Segitiga</h1>
-         <p>Web ini didesain untuk dapat membantumu menghitung luas dan keliling segitiga</p>
-     </header>
- 
-     <main>
-         <div class="calculator-container">
-         <section id="keliling-section">
-             <h2>Menghitung Keliling Segitiga</h2>
-             <img src="https://1.bp.blogspot.com/-8ECiWkXVFa8/X5i0XGIPc7I/AAAAAAAARxM/vUxWSahkV3UR28ziLVGwsatdjfaqpoNCwCLcBGAsYHQ/s1280/Rumus%2BKeliling%2BSegitiga.png" alt="Rumus Keliling Segitiga Beserta Gambar" />
- 
-             <form>
-                 <label for="Alpha">Sisi A:</label>
-                 <input type="number" id="Alpha" name="sisi A">
- 
-                 <label for="Beta">Sisi B:</label>
-                 <input type="number" id="Beta" name="sisi B">
- 
-                 <label for="Charlie">Sisi C:</label>
-                 <input type="number" id="Charlie" name="sisi C">
- 
-                 <label for="keliling">Keliling:</label>
-                 <input type="number" id="keliling" name="Keliling" disabled size="5">
- 
-                 <button type="button" onclick="hitungayam()">Hitung</button>
-                 <button type="button" onclick="resetkeliling()">Reset</button>
-             </form>
-         </section>
- 
-         <section id="luas-section">
-             <h2>Menghitung Luas Segitiga</h2>
-             <img src="https://blog-static.mamikos.com/wp-content/uploads/2021/04/luas-segitiga.jpg" alt="Rumus Luas Segitiga Beserta Gambar" />
- 
-             <form>
-                 <label for="alas">Alas:</label>
-                 <input type="number" id="alas" name="alas">
- 
-                 <label for="tinggi">Tinggi:</label>
-                 <input type="number" id="tinggi" name="tinggi">
- 
-                 <label for="luas">Luas:</label>
-                 <input type="number" id="luas" name="luas" disabled size="5">
- 
-                 <button type="button" onclick="hitungluas()">Hitung</button>
-                 <button type="button" onclick="resetluas()">Reset</button>
-             </form>
-         </section>
-         </div>
-     </main>
+    <header>
+        <h1>Triangle Calculator</h1>
+      </header>
+      <main>
+        <div id="calculator">
+          <!-- Mode Switch Button -->
+          <div class="switch-container">
+            <div class="switch-button-container">
+              <button id="switchButton" onclick="switchMode()">Switch Mode</button>
+            </div>
+        </div>
+    
+          <!-- Keliling Mode -->
+          <div id="kelilingMode">
+            <h2>Menghitung Keliling</h2>
+            <div class="input-group">
+              <label for="side1">Side 1:</label>
+              <input type="number" id="side1" placeholder="Enter side 1">
+            </div>
+            <div class="input-group">
+              <label for="side2">Side 2:</label>
+              <input type="number" id="side2" placeholder="Enter side 2">
+            </div>
+            <div class="input-group" id="side3Input" style="display:none;">
+              <label for="side3">Side 3:</label>
+              <input type="number" id="side3" placeholder="Enter side 3">
+            </div>
+            <button onclick="calculatePerimeter()">Calculate Perimeter</button>
+            <div class="result">
+              <p id="perimeterResult"></p>
+              <p id="perimeterFormula"></p>
+            </div>
+            <button onclick="reset()">Reset</button>
+          </div>
+    
+          <!-- Luas Mode -->
+          <div id="luasMode" style="display:none;">
+            <h2>Menghitung Luas</h2>
+            <div class="input-group">
+              <label for="base">Base:</label>
+              <input type="number" id="base" placeholder="Enter base">
+            </div>
+            <div class="input-group">
+              <label for="height">Height:</label>
+              <input type="number" id="height" placeholder="Enter height">
+            </div>
+            <button onclick="calculateArea()">Calculate Area</button>
+            <div class="result">
+              <p id="areaResult"></p>
+              <p id="areaFormula"></p>
+            </div>
+            <button onclick="reset()">Reset</button>
+          </div>
+    
+        </div>
+      </main>
+      <footer>
+        <p>© 2023 Triangle Calculator</p>
+      </footer>
  </body>
- 
  </html>
